@@ -1,0 +1,208 @@
+<!--
+NAME: EDWARD TAN YUAN CHONG
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>SP DVD STORE</title>
+
+    <!-- jQuery script -->
+    <script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/templatemo-572-designer.css">
+
+    <link rel="shortcut icon" href="../dvd.png"> <!-- https://www.flaticon.com/free-icon/dvd_1262340 -->
+<!--
+
+TemplateMo 572 Designer
+
+https://templatemo.com/tm-572-designer
+
+-->
+  </head>
+
+<body class="background">
+
+  <div class="loader">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+  </div>
+
+  <header id="#top">
+
+      <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html" id="header"> 💿 SP DVD STORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="loginLine"><span>LOGGED IN AS: <span style="color: #ff565b;" id="username">GUEST</span></span></div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Homepage</a>
+                </li>
+                <li class="nav-item" id="loginStatus">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+
+  </header>
+
+  <div class="main-banner change-name" style="padding-top:80px;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="header-text">
+                    <h2 style="text-decoration:underline;">WELCOME TO <em>SP DVD</em>.</h2>
+                    <h6>With SP DVD, it's so possible.</h6>
+                    <h6>Filter for DVD(s) in our store below</h6>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="search-form">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <form id="search-form" name="dvdSearch">
+                      <div class="row">
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="dvdTitle" class="form-label">Search DVDs by Title</label>
+                                  <input type="text" name="searchTitle" class="searchText" id="dvdTitle" placeholder="Type any DVD title..." autocomplete="on">
+                              </fieldset>
+                          </div>
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="category" class="form-label">Choose Category</label>
+                                  <select name="Category" class="form-select" aria-label="Default select example" id="category">
+                                      <option selected value="">Choose category</option>
+                                  </select>
+                              </fieldset>
+                          </div>
+                          <div class="col-lg-4">
+                              <fieldset>
+                                  <label for="maxPrice" class="form-label">Maximum Price</label>
+                                  <input type="number" name="maxPrice" placeholder="Type in your maximum price..." id="maxPrice">
+                              </fieldset>
+                          </div>
+                          <span class="col-lg-12" id="searchResponse"></span>
+                          <div class="col-lg-6">
+                            <button class="main-button" type="reset">Reset</button>
+                          </div>
+                          <div class="col-lg-6">                        
+                            <button id='search_button' class="main-button">Search Now</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/isotope.min.js"></script>
+  <script>
+    // Loading animation function
+    setTimeout(function(){
+        $('.loader').fadeToggle();
+    }, 1500);
+    // Check user status
+    if(localStorage['username'] != null) {
+      $("#username").html(localStorage['username']);
+      $("#username").css('text-transform','uppercase');
+      // Change login button to customer/admin based on status
+      if(localStorage['status'] == "admin") {
+        $("#loginStatus").html('<a class="nav-link" href="admin.html">Admin</a>');
+      } else {
+        $("#loginStatus").html('<a class="nav-link" href="customerhome.html">Customer</a>');
+      }
+    }
+    // Get category API
+    var settings = {
+      "url": "http://localhost:3000/categories",
+      "method": "GET",
+      "timeout": 0,
+      "headers": {},
+    };
+    $.ajax(settings).success(function (response) {
+      // Add category options to category select element
+      var selectCategory = document.getElementById("category");
+        response.forEach(category=>{
+          category = category.name;
+          var option = document.createElement("option");
+          option.text = category;
+          option.id = category;
+          selectCategory.add(option);
+        });
+        // Clear response
+        $("#searchResponse").empty();
+    })
+    .error((response)=>{
+      $("#searchResponse").html("Oops. Something went wrong...");
+    });
+    // Search DVD API
+    $("#search_button").click((event)=>{
+      event.preventDefault(); // Prevent default behaviour of element
+      var query = "";
+      if($("#dvdTitle").val() != "") {
+        query+=`title=${$("#dvdTitle").val()}&`;
+      }
+      if($("#category").val() != ""){
+        query+=`category=${$("#category").val()}&`;
+      }
+      if($('#maxPrice').val() != "") {
+        query+=`maxPrice=${$("#maxPrice").val()} `;
+      }
+      var settings = {
+        "url": "http://localhost:3000/searchDVD?" + query.slice(0,-1),
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "Application/JSON"
+        },
+      };
+      $.ajax(settings).success(function (response) {
+        localStorage['result'] = JSON.stringify(response);
+        window.location.href='results.html';
+      })
+      .error(function (response) {
+        $("#searchResponse").html(response.responseJSON.error_msg);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!--
+NAME: EDWARD TAN YUAN CHONG
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>SP DVD STORE</title>
+
+    <!-- jQuery script -->
+    <script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/templatemo-572-designer.css">
+
+    <link rel="shortcut icon" href="../dvd.png"> <!-- https://www.flaticon.com/free-icon/dvd_1262340 -->
+
+<!--
+
+TemplateMo 572 Designer
+
+https://templatemo.com/tm-572-designer
+
+-->
+  </head>
+
+<body class="background">
+  <div class="loader">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+  </div>
+
+  <header id="#top">
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html" id="header"> 💿 SP DVD STORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="loginLine"><span>LOGGED IN AS: <span style="color: #ff565b;" id="username">GUEST</span></span></div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Homepage</a>
+                </li>
+                <li class="nav-item" id="loginStatus">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+  </header>
+  <div class="main-banner col-lg-10 offset-lg-1" style="padding-top:80px; padding-bottom:80px;">
+    <h2 style="text-decoration:underline;"><em>More Information</em>:</h2>
+    <span id="moreDetail">
+      <h2 id="title"></h2>
+      <h2 id="category"></h2>
+      <h2 id="release_year"></h2>
+      <h2 id="description"></h2>
+      <h2 id="rating"></h2>
+      <h2 id="actors"></h2>
+    </span>
+    <h2 style="text-decoration:underline; margin-top:70px;"><em>CUSTOMER REVIEWS</em>:</h2>
+    <span id="reviews" class="row">
+    </span>
+    <h2 style="text-decoration:underline;">LEAVE A <em>REVIEW</em>:</h2>
+    <div class="search-form" style="margin-top:0px;">
+      <form id="search-form" style="font-size:20px; font-weight:bold;">
+        <p style="color:#ff565b; font-size:20px;">PLEASE ENSURE TO BE LOGGED IN AS A CUSTOMER TO LEAVE A REVIEW</p>
+        <div style="margin:20px 0 20px 0;">
+          RATE THIS MOVIE OUT OF 5<br>
+          <span id="slidervalue">3</span><br>
+          <input type="range" min="1" max="5" step="1" id="customer_rating" style="width:50%;">
+        </div>
+        <div>
+          LEAVE A REVIEW ON THE MOVIE BELOW<br>
+          <textarea id="user_review" placeholder="Leave a review here. Character Limit is 250." required></textarea>
+        </div>
+        <span id="review_response"></span>
+        <div>
+          <button id="btn_review_submit" class="main-button" style="width:25%; margin-top:20px;">Submit</button>
+        </div>
+      </form>
+      <button id='backToResult' class="main-button">Back</button>
+    </div>
+  </div>
+   <!-- Scripts -->
+   <script src="js/isotope.min.js"></script>
+  <script>
+    // Check user status
+    if(localStorage['username'] != null) {
+      $("#username").html(localStorage['username']);
+      $("#username").css('text-transform','uppercase');
+      // Change login button to customer/admin based on status
+      if(localStorage['status'] == "admin") {
+        $("#loginStatus").html('<a class="nav-link" href="admin.html">Admin</a>');
+      } else {
+        $("#loginStatus").html('<a class="nav-link" href="customerhome.html">Customer</a>');
+      }
+    }
+    // Loading animation function
+    setTimeout(function(){
+        $('.loader').fadeToggle();
+    }, 1500);
+    // Change slider value in html
+    $(document).on('input', '#customer_rating', function() {
+      $('#slidervalue').html($(this).val());
+    });
+    // Film detail from results page
+    moreInfo = JSON.parse(localStorage['moreInfo']);
+    // Get film details API
+    var settings = {
+      "url": "http://localhost:3000/details/" + moreInfo.film_id,
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "Content-Type": "Application/JSON"
+      }
+    };
+    $.ajax(settings).success(function (response) {
+      // Check if there are any missing values, if there are, replace with error messages Information not found.
+      Object.keys(response).forEach((key)=>{
+        if(response[key] === null || response[key] == "") {
+          response[key] = "Information not found.";
+        }
+      });
+      // Update HTML with film detail
+      $("#title").html("<em>TITLE: </em>"+moreInfo.title);
+      $("#category").html("<em>CATEGORY: </em>"+response.category);
+      $("#release_year").html("<em>RELEASE YEAR: </em>"+moreInfo.release_year);
+      $("#description").html("<em>DESCRIPTION: </em>"+response.description);
+      $("#rating").html("<em>RATING: </em>"+moreInfo.rating);
+      $("#actors").html("<em>ACTOR(S): </em>"+ response.names);
+    })
+    .error((response)=>{
+      $("#moreDetail").html("<h6 class='col-lg-12'>" + response.responseJSON.error_msg +"</h6>");
+    })
+    // Get reviews API
+    var settings = {
+      "url": "http://localhost:3000/reviews/" + moreInfo.film_id,
+      "method": "GET",
+      "timeout": 0,
+    };
+    $.ajax(settings).success(function (response) {
+      if(response == undefined) {
+        $("#reviews").html("<h6 class='col-lg-12'>No customer reviews yet. Be the first!</h6>");
+      } else {
+        for(i in response){
+          // Append reviews as cards
+          $("#reviews").append('<div class="card col-lg-6 offset-lg-3"><strong>' + response[i].first_name + ' ' + response[i].last_name + '</strong>>Rating: ' + response[i].customer_rating + '/5<br>>Review: ' + response[i].review  + '<br>' + response[i].created_at + '</div>');
+        }
+      }
+    })
+    .error((response)=>{
+      $("#reviews").html("<h6 class='col-lg-12'>" + response.responseJSON.error_msg + "</h6>");
+    })
+    // Add customer review API
+    $("#btn_review_submit").click((event)=>{
+      event.preventDefault(); // Prevent default behaviour of element
+      var settings = {
+        "url": "http://localhost:3000/addReview",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Authorization": "Bearer " + localStorage['token'],
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          "film_id": moreInfo.film_id,
+          "customer_rating": $('#customer_rating').val(),
+          "review": $("#user_review").val()
+        }),
+      };
+      $.ajax(settings).success(function (response) {
+        $("#review_response").html(response.success_msg);
+        $("#review_response").css('color',"#49be25");
+        setTimeout(function(){
+          location.reload();
+        }, 3000);
+      })
+      .error((response)=>{
+        $("#review_response").html(response.responseJSON.error_msg);
+        $("#review_response").css('color',"#ff565b");
+      });
+    });
+    // Back button event
+    $("#backToResult").click(()=>{
+      window.location.href='results.html';
+    });
+  </script>
+</body>
+</html>
